@@ -1,0 +1,377 @@
+	<!DOCTYPE html>  
+	<html lang="en">
+	<head>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <title>AdiSync Solutions LLP — Global Growth & Trade Consulting</title>
+	  <meta name="description" content="AdiSync Solutions LLP helps ambitious businesses scale globally with sales, market entry, e-commerce, and startup mentoring services." />
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+	  <style>
+		:root{
+		  --navy:#0A1F44;
+		  --gold:#D4AF37;
+		  --light:#F5F5F5;
+		  --white:#FFFFFF;
+		  --text:#1B2A4A;
+		  --shadow:0 10px 30px rgba(10,31,68,.10);
+		  --radius:18px;
+		  --max:1200px;
+		}
+		*{box-sizing:border-box}
+		html{scroll-behavior:smooth}
+		body{margin:0;color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--white);}
+		a{color:inherit;text-decoration:none}
+		img{max-width:100%;display:block}
+		.container{width:100%;max-width:var(--max);margin-inline:auto;padding:0 20px}
+		.grid{display:grid;gap:22px}
+		.btn{display:inline-block;padding:12px 18px;border-radius:999px;font-weight:600;border:2px solid transparent;transition:.25s ease;}
+		.btn.gold{background:var(--gold);color:var(--navy)}
+		.btn.gold:hover{filter:brightness(.95);transform:translateY(-1px)}
+		.btn.ghost{background:transparent;border-color:var(--gold);color:var(--gold)}
+		.btn.ghost:hover{background:var(--gold);color:var(--navy)}
+		.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+		header{position:sticky;top:0;z-index:50;background:rgba(10,31,68,.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+		.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;color:#fff}
+		.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+		.brand .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#f8e08c);display:grid;place-items:center;color:var(--navy);font-weight:800}
+		nav a{padding:10px 12px;border-radius:10px;color:#fff;opacity:.9}
+		nav a:hover{background:rgba(255,255,255,.08);opacity:1}
+		.nav-cta{display:flex;gap:10px;align-items:center}
+		.menu-toggle{display:none}
+		.hero{background:linear-gradient(140deg,var(--navy) 55%, #122e66 100%);color:#fff}
+		.hero .wrap{padding:90px 0;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+		h1{font-family:"Playfair Display", serif;font-weight:800;line-height:1.05;margin:0 0 14px;font-size:clamp(34px,5vw,56px)}
+		.lead{font-size:clamp(16px,2.1vw,19px);opacity:.95;margin:0 0 26px}
+		.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+		.hero .figure{position:relative}
+		.hero .figure .globe{position:absolute;inset:auto -18px -18px auto;background:var(--gold);color:var(--navy);padding:10px 14px;border-radius:14px;font-weight:700;box-shadow:var(--shadow)}
+		section{padding:72px 0}
+		.section-title{font-family:"Playfair Display",serif;font-size:clamp(24px,3.4vw,36px);margin:0 0 10px;color:var(--navy)}
+		.section-sub{margin:0 0 26px;opacity:.8;max-width:820px}
+		.about{background:var(--light)}
+		.about .cols{grid-template-columns:1fr 1fr}
+		.services .grid{grid-template-columns:repeat(4,1fr)}
+		.service-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--gold),#f3d97a);display:grid;place-items:center;color:var(--navy);font-weight:800;margin-bottom:14px}
+		.services .card p{opacity:.9}
+		.why .grid{grid-template-columns:repeat(3,1fr)}
+		.why .point{display:flex;gap:12px}
+		.why .point i{flex:0 0 44px;height:44px;border-radius:12px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-style:normal;font-weight:800}
+		.team .grid{grid-template-columns:1fr 1fr}
+		.cta{background:linear-gradient(160deg,var(--navy),#0f2a5a);color:#fff}
+		.cta .container{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+		.contact .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+		form .field{display:grid;gap:8px;margin-bottom:14px}
+		input,textarea{border:1px solid #d9deea;border-radius:12px;padding:12px 14px;font:inherit}
+		textarea{min-height:120px;resize:vertical}
+		footer{background:var(--navy);color:#cdd5ea;padding:34px 0;margin-top:40px}
+		footer a{color:#e9e6cf}
+		@media (max-width: 1000px){
+		  .hero .wrap{grid-template-columns:1fr}
+		  .about .cols{grid-template-columns:1fr}
+		  .services .grid{grid-template-columns:repeat(2,1fr)}
+		  .why .grid{grid-template-columns:1fr}
+		  .team .grid{grid-template-columns:1fr}
+		  .contact .wrap{grid-template-columns:1fr}
+		  .nav-cta{display:none}
+		}
+		@media (max-width: 640px){
+		  nav{display:none}
+		  .menu-toggle{display:inline-flex;gap:10px;align-items:center;color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:8px 12px}
+		}
+	  </style>
+	</head>
+	<body>
+	  <!-- Header -->
+	  <header>
+		<div class="container nav">
+		  <a href="#home" class="brand" aria-label="Helping Solutions home">
+				<div class="logo">
+				<a href="#home"><img src="Adisync Solutions Logo Design.png" alt="Company Logo"  width="100" height = "50"  style="border-radius:14px; margin-bottom:14px;"></a>
+			</div>
+			 </a>
+		  <nav aria-label="Primary">
+			<a href="#about-adisync">About</a>
+			<a href="#services">Services</a>
+			<a href="#why">Why Us</a>
+			<a href="#team">Team</a>
+			<a href="#partners">Partners</a>
+			<a href="#ecommerce">E-commerce</a>
+		  </nav>
+		  <div class="nav-cta">
+			<a class="btn ghost" href="#contact">Book a Consultation</a>
+			<a class="btn gold" href="#services">Explore Services</a>
+		  </div>
+		  <button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('nav').style.display = document.querySelector('nav').style.display==='block'?'none':'block'">☰ Menu</button>
+		</div>
+	  </header>
+
+	  <!-- Hero -->
+	  <section id="home" class="hero" role="banner">
+		<div class="container wrap">
+		  <div>
+			<h1>Helping Ambitious Businesses Scale Globally</h1>
+			<p class="lead">We partner with visionary companies to accelerate international growth. From logistics and sales to strategic partnerships and market entry, your expansion becomes efficient, sustainable, and tailored to your unique goals.</p>
+			<div class="ctas">
+			  <a class="btn gold" href="#contact">Let’s Talk</a>
+			  <a class="btn ghost" href="#services">Explore Our Services</a>
+			</div>
+		  </div>
+		  <div class="figure">
+			<img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop" alt="Global business skyline" />
+			<div class="globe">Global Reach • Strategic Growth</div>
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- About AdiSync -->
+	  <section id="about-adisync" class="about">
+		<div class="container">
+		  <h2 class="section-title">About AdiSync</h2>
+		  <p class="section-sub">At AdiSync Solutions LLP, we believe global growth should be an exciting journey, not a maze. We simplify international expansion with the expertise, connections, and strategies that ambitious businesses need to succeed across diverse markets.</p>
+		  <div class="grid cols">
+			<div class="card">
+			  <h3 style="margin-top:0">Our Mission</h3>
+			  <p>Enable companies of all sizes to confidently enter, expand, and scale in new markets. We provide the tools, expertise, and strategies needed to navigate complex environments, reduce risk, and unlock growth opportunities.<br> Our approach delivers measurable outcomes that empower organizations not only to compete effectively but also to thrive in an ever-evolving global marketplace.</p>
+			  <p>Our core values are Reliable Guidance, Strategic Clarity, and Successful Global Expansion.</p>
+			</div>
+			<div class="card">
+			  <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop" alt="Team collaboration around a table" style="border-radius:14px" />
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- Services -->
+	  <section id="services" class="services">
+		<div class="container">
+		  <h2 class="section-title">Services</h2>
+		  <p class="section-sub">From representation to innovation, we provide end-to-end support that drives sustainable growth worldwide.</p>
+		  <div class="grid">
+			
+			<!-- Service 1 -->
+			<div class="card">
+			  <div class="service-icon">🤝</div>
+			  <h3>Representation & Support (Sales / Services)</h3>
+			  <p><strong>Opportunity</strong><br>
+			  Many companies expanding into international markets face challenges in building reliable local presence. They seek partners who can represent them on the ground — ensuring accountability, customer engagement, and service delivery.</p>
+			  <p><strong>Our Value Proposition</strong><br>
+			  Provide dedicated sales representation to grow market share.<br>
+			  Offer after-sales and service support to enhance customer satisfaction.<br>
+			  Act as a single point of contact for international clients, reducing their overhead and risk.</p>
+			  <p><strong>Revenue Models</strong><br>
+			  Fee-based engagement (monthly/annual retainership).<br>
+			  Commission-based revenue share on sales.<br>
+			  Hybrid model (base fee + performance incentive).</p>
+			  <p><strong>Benefits for Partners</strong><br>
+			  Faster market entry with minimal upfront investment.<br>
+			  Local accountability with trusted representation.<br>
+			  Enhanced customer loyalty through responsive service support.</p>
+			</div>
+
+			<!-- Service 2 -->
+			<div class="card">
+			  <div class="service-icon">📦</div>
+			  <h3>Supply Chain Management (SCM)</h3>
+			  <p><strong>Opportunity</strong><br>
+			  Efficient sourcing, warehousing, and logistics are critical in global competitiveness. Companies increasingly prefer specialized partners to manage complex, multi-country supply chains.</p>
+			  <p><strong>Our Value Proposition</strong><br>
+			  End-to-end sourcing and procurement support.<br>
+			  Establishing and managing global warehousing hubs in strategic locations.<br>
+			  Logistics coordination to optimize cost and lead times.<br>
+			  Leveraging digital tools for visibility and real-time tracking.</p>
+			  <p><strong>Revenue Models</strong><br>
+			  Management fee for supply chain operations.<br>
+			  Margin-based model (small % on procurement/ logistics savings).<br>
+			  Subscription-based model for digital SCM solutions.</p>
+			  <p><strong>Benefits for Partners</strong><br>
+			  Cost savings through efficient sourcing and vendor management.<br>
+			  Improved reliability with optimized logistics & warehousing.<br>
+			  Better decision-making via supply chain analytics and reporting.</p>
+			</div>
+
+			<!-- Service 3 (Consulting) -->
+			<div class="card">
+			  <div class="service-icon">📊</div>
+			  <h3>Consulting Services</h3><br>
+			  <p><strong>Transform strategy into action</strong><br>
+			  We help companies build long-term competitiveness through transformation consulting.</p>
+			  <p> •	Translate corporate strategy into functional sub-strategies<br>
+			  •	Drive culture change, leadership development & talent retention<br>
+			  •	Support engineering innovation, product development & technology integration<br>
+			  •	Provide market entry strategies & global expansion support</p>
+			  <p><strong>Our Value Proposition</strong><br>
+			  •	Deliver sustainable transformation with measurable impact<br>
+			  •	Accelerate growth through proven frameworks and insights<br>
+			  •	Position companies for innovation and global competitiveness</p>
+			  <p><strong>Benefits for Partners</strong><br>
+			  • Access to specialized expertise without hiring overhead.<br>
+			  • Faster implementation with proven frameworks.<br>
+			  • Strengthen long-term competitiveness through continuous improvement initiatives<br>
+			  •	Build strategic partnerships for sustainable growth</p>
+			</div>
+
+			<!-- Service 4 (Innovation & NPD) -->
+			<div class="card">
+			  <div class="service-icon">💡</div>
+			  <h3>New Product Development & Technology Enablement</h3>
+			  <p><strong>Opportunity</strong><br>
+			  Companies are under pressure to innovate while keeping costs low. Outsourcing elements of product design, engineering, and technology integration creates value and speed.</p>
+			  <p><strong>Our Value Proposition</strong><br>
+			  Engineering innovation: prototype development, testing, and validation.<br>
+			  Product development support: from concept to commercialization.<br>
+			  Technology enablement: integrating AI, IoT, and automation into operations.<br>
+			  Partnership with Industry 5.0 ecosystems to ensure human-tech collaboration.</p>
+			  <p><strong>Revenue Models</strong><br>
+			  Project-based contracts (NPD assignments).<br>
+			  Joint IP ownership models (shared revenue from developed products).<br>
+			  Licensing / royalties from technology enablement.</p>
+			  <p><strong>Benefits for Partners</strong><br>
+			  Accelerated time-to-market.<br>
+			  Cost-effective development without compromising quality.<br>
+			  Access to cutting-edge technology and expertise.<br>
+			  Long-term collaboration opportunities through joint innovation.</p>
+			</div>
+
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- Why AdiSync -->
+	  <section id="why" class="why">
+		<div class="container">
+		  <h2 class="section-title">Why AdiSync?</h2>
+		  <p class="section-sub">Three reasons partners choose us for international expansion and long-term growth.</p>
+		  <div class="grid">
+			<div class="card">
+			  <div class="point">
+				<i>🌍</i>
+				<div>
+				  <h3>Global Reach</h3>
+				  <p>Tap into our network across Asia, Europe, and the Americas. We open doors, surface partners, and accelerate market access.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="point">
+				<i>🤝</i>
+				<div>
+				  <h3>Strategic Partnerships</h3>
+				  <p>Our team helps you find, evaluate, and manage long-term customers. This lowers risk and builds lasting growth opportunities.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="point">
+				<i>📈</i>
+				<div>
+				  <h3>Results-Driven</h3>
+				  <p>We don’t just consult, we execute. Every engagement is tied to measurable outcomes that impact revenue and efficiency.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- Team Section -->
+	  <section id="team" class="team">
+		<div class="container">
+		  <h2 class="section-title">Our Team</h2>
+		  <p class="section-sub">Meet the leaders driving AdiSync’s global vision and partnerships.</p>
+		  <div class="grid cols">
+			
+			<!-- Sunil Kulkarni -->
+			<div class="card">
+			  <img src="images\sunil.jpg" alt="Sunil Kulkarni" width="210"  height = "210" style="border-radius:14px; margin-bottom:14px;" />
+			  <h3>Sunil Kulkarni</h3>
+			  <p>Sunil Kulkarni is a seasoned professional with over 20 years of diverse experience across Market Research, Business Development, Supply Chain Management, and Operations. He has held key positions in both Indian and multinational companies, with a strong track record in the construction equipment, automotive, and market research industries.</p>
+			  <p>Sunil holds a degree in Production Engineering from India, along with a dual master’s degree in Business Intelligence and Analytics from universities in Germany and Argentina.</p>
+			  <p>Blending corporate and entrepreneurial experience, Sunil brings a global perspective and a results-driven approach to fostering business growth and innovation.</p>
+			</div>
+
+			<!-- Jochen -->
+			<div class="card">
+			  <img src="images\Jochen.jpg" alt="Jochen" width="220" height = "210"  style="border-radius:14px; margin-bottom:14px;" />
+			  <h3>Jochen Adam-Mueller</h3>
+			  <p>Jochen brings over 25 years of international leadership experience, having served as Managing Director and Vice President of Sales & Marketing across global organizations. He has successfully led international sales and service operations generating hundreds of millions in revenue, driven business turnarounds, and built high-performing teams across diverse markets.</p>
+			  <p>With a strong belief that people are at the core of every successful strategy, Jochen combines deep practical expertise with a people-centered approach to help companies achieve sustainable growth and long-term competitiveness.</p>
+			</div>
+
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- Partners Section -->
+	  <section id="partners" class="partners">
+		<div class="container">
+		  <h2 class="section-title">Our Partners</h2>
+		  <p class="section-sub">We collaborate with trusted global and local partners to strengthen opportunities and deliver results.</p>
+		  <div class="grid">
+			<!-- Placeholder content - you can add partner logos/cards here later -->
+			<div class="card">
+			  <h3>Partner Placeholder</h3>
+			  <p>Space reserved for partner details, logos, or testimonials.</p>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- Ecommerce Section -->
+	  <section id="ecommerce" class="ecommerce">
+		<div class="container">
+		  <h2 class="section-title">E-commerce</h2>
+		  <p class="section-sub">This section is under progress. Please check back soon.</p>
+		</div>
+	  </section>
+
+	  <!-- CTA -->
+	  <section class="cta">
+		<div class="container">
+		  <h2 style="margin:0">Ready to Scale Your Business Globally?</h2>
+		  <a href="#contact" class="btn gold">Book a Consultation</a>
+		</div>
+	  </section>
+
+	  <!-- Contact -->
+	  <section id="contact" class="contact">
+		<div class="container wrap">
+		  <div>
+			<h2 class="section-title">Contact Us</h2>
+			<p class="section-sub">Let’s start a conversation about your global growth goals.</p>
+			<form action="sunilnk80@gmail.com" method="post" enctype="text/plain">
+			  <div class="field">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" required />
+			  </div>
+			  <div class="field">
+				<label for="email">Email</label>
+				<input id="email" type="email" name="email" required />
+			  </div>
+			  <div class="field">
+				<label for="message">Message</label>
+				<textarea id="message" name="message" required></textarea>
+			  </div>
+			  <button type="submit" class="btn gold">Send Message</button>
+			</form>
+		  </div>
+		  <div>
+			<div class="card">
+			  <h3>AdiSync Solutions LLP</h3>
+			  <p><strong>Email:</strong> sunilnk80@gmail.com</p>
+			  <p><strong>Phone:</strong><br>+353 870616658 <br> +91 9765044954</p>
+			  <p><strong>Offices:</strong><br>Pune, India<br>Cologne Bonn region, Germany<br>Dublin, Ireland</p>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	  <!-- Footer -->
+	  <footer>
+		<div class="container">
+		  <p>&copy; 2025 AdiSync Solutions LLP. All rights reserved.</p>
+		</div>
+	  </footer>
+	</body>
+	</html>
